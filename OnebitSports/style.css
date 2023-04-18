@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.conteiner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  gap: 8px 15px;
+  flex-wrap: wrap;
+}
+.headerbtngroup {
+  gap: 15px;
+  display: flex;
+}
+.navbtn {
+  padding: 8px;
+  gap: 20px;
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navbtn:hover {
+  color: brown;
+  border-bottom: solid 2px brown;
+}
+.navlogo {
+  width: 180px;
+}
+.sectiontitle {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sectiondescricao {
+  text-align: center;
+  color: #383838;
+}
+.gridconteiner {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainconteiner siderbarconteiner";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+.maincardimg {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.siderbarimg {
+  width: 100%;
+  border-radius: 10px;
+}
+.categoticard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.mainconteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainconteiner;
+}
+.categoticard:hover {
+  border-color: black;
+}
+.sectiontitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+.siderbarconteiner {
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: siderbarconteiner;
+  gap: 20px;
+}
+.siderbarcard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.siderbarcard:hover {
+  border-color: gainsboro;
+}
+.siderbarcartitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.logofooter {
+  width: 180px;
+}
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+.footeranchor {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 630px) {
+  .gridconteiner {
+    grid-template-areas: "mainconteiner" "siderbarconteiner";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .siderbarconteiner {
+    min-width: auto;
+  }
+  .footeranchor {
+    font-size: 19px;
+  }
+}
+@media (max-width: 463px) {
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
